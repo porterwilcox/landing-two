@@ -1,0 +1,51 @@
+:root {
+    --light-shade: #F5F4F3;
+    --light-accent: #958E78;
+    --main-color: #898278;
+    --dark-accent: #827F7C;
+    --dark-shade: #25272E;
+    --intro-middle: #141a2d;
+    --intro-left: #0a143d;
+}
+.h100 {
+    height: 100vh;
+}
+.bg-dark-shade {
+    background: var(--dark-shade);
+}
+.bg-dark-accent {
+    background: var(--dark-accent);
+}
+.bg-main-color {
+    background: var(--main-color);
+}
+.bg-light-accent {
+    background: var(--light-accent);
+}
+.bg-light-shade {
+    background: var(--light-shade);
+}
+.bg-intro-middle {
+    background: var(--intro-middle);
+}
+.bg-intro-left {
+    background: var(--intro-left);
+}
+.text-light-shade {
+    color: var(--light-shade);
+}
+.h-inherit {
+    height: inherit;
+}
+.intro-card {
+    height: 400px;
+    max-width: 60vw;
+    position: fixed;
+    top: 20vh;
+    left: 15vw;
+}
+.intro-border {
+    border-radius: 1%;
+    border: 2px solid var(--dark-shade);
+    border-left: 10px solid var(--light-shade)
+}
