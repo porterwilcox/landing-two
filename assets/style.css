@@ -43,6 +43,14 @@
 
 
 /* unique to elements */
+body {
+    overflow-x: hidden;
+}
+.sub-title {
+    border-left: 2px solid var(--main-color);
+    padding-left: 1vw;
+}
+    /* HEADER */
 .bg-create {
     background-image: url('./images/create.jpg');
     background-position: center;
@@ -101,7 +109,30 @@ a:hover {
     transition: transform 0.9s;
     transform-style: preserve-3d;   
 }
+    /* ABOUT */
+.slant-about {
+    position: relative;
+    height: 30vh;
+}
+.slant-about::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+	border-style: solid;
+	border-color: transparent;
+	border-width: 10vh 50vw;
+	border-bottom-color: var(--light);
+	border-left-color: var(--light);
+}
+.about-card {
+    box-shadow: 0 2px 5px black;
+    border-radius: 5%
+}
+.about-cards {
+    box-shadow: 0 2px 5px lightgray;
+    background: var(--light-shade);
 
+}
 
 
 
