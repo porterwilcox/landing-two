@@ -5,8 +5,6 @@
     --main-color: #9e5a63;
     --dark-accent: #644e5b;
     --dark-shade: #314455;
-    --intro-middle: #141a2d;
-    --intro-left: #0a143d;
 }
 .h100 {
     height: 100vh;
@@ -29,47 +27,80 @@
 .bg-light-shade {
     background: var(--light-shade);
 }
-.bg-intro-middle {
-    background: var(--intro-middle);
-}
-.bg-intro-left {
-    background: var(--intro-left);
-}
 .text-light-shade {
     color: var(--light-shade);
 }
 .h-inherit {
     height: inherit;
 }
-
+.text-dark-shade {
+    color: var(--dark-shade);
+}
+.text-vis {
+    color: whitesmoke;
+    text-shadow: 0 0 5px black;
+}
 
 
 /* unique to elements */
-.intro-card {
-    height: 75vh;
-    max-width: 60vw;
-    position: fixed;
-    top: 15vh;
-    left: 15vw;
-    /* box-shadow: 0 2px .5px black; */
-}
-.intro-border {
-    border-radius: 1%;
-    border: 1.5px solid var(--dark-shade);
-    border-left: 1vw solid var(--light)
-}
-.intro-bg {
-    background: linear-gradient(90deg, var(--dark-shade) 15.3%, white 0%, white)
-}
-.clean-font {
-    font-family: 'Major Mono Display', monospace;
-    font-family: 'Faster One', cursive;
+.bg-create {
+    background-image: url('./images/create.jpg');
+    background-position: center;
+    background-size: cover;
 }
 .side-nav-btn {
     position: fixed;
+    left: .5vw;
+    top: 1vh;
     z-index: 2;
 }
-
+.side-nav {
+    position: fixed;
+    z-index: 1;
+    padding-top: 20vh;
+}
+a {
+    color: var(--light-shade);
+}
+a:hover {
+    text-decoration: none;
+    color: var(--dark-shade);
+}
+.i-am-border {
+    border-right: 3px solid var(--dark-accent);
+}
+.fast-font {
+    font-family: 'Nothing You Could Do', cursive;
+}
+.connect-card {
+    position: relative;
+    height: 20vh;
+    perspective: 1000px;
+}
+.connect-card-inner {
+    background: var(--main-color);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform .6s;
+    transform-style: preserve-3d;
+    box-shadow: 2px 2px 5px var(--dark-shade);
+    border-radius: 5%;
+}
+.connect-card:hover .connect-card-inner  {
+    transform: rotateX(180deg);
+    box-shadow: 2px -1px 5px var(--dark-shade);
+}
+.connect-card-front, .connect-card-back {
+    background-color: var(--main-color);
+    position: absolute;
+    backface-visibility: hidden;
+}
+.connect-card-back {
+    transform: rotateX(180deg);
+    transition: transform 0.9s;
+    transform-style: preserve-3d;   
+}
 
 
 
@@ -121,7 +152,7 @@
     border-radius: 2.85714px;
     -webkit-transition: 0.3s;
     transition: 0.3s;
-    background: black;
+    background: white;
     position: relative; }
     .tcon-menu__lines::before, .tcon-menu__lines::after {
       display: inline-block;
@@ -130,7 +161,7 @@
       border-radius: 2.85714px;
       -webkit-transition: 0.3s;
       transition: 0.3s;
-      background: black;
+      background: white;
       content: '';
       position: absolute;
       left: 0;
