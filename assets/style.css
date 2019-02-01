@@ -75,7 +75,7 @@ a:hover {
     color: var(--dark-shade);
 }
 .i-am-border {
-    border-right: 3px solid var(--dark-accent);
+    border-left: 3px solid var(--main-color);
 }
 .fast-font {
     font-family: 'Nothing You Could Do', cursive;
@@ -144,6 +144,8 @@ a:hover {
 .portrait img {
     border-radius: 50%;
     box-shadow: 0 1px 5px black;
+    height: 300px;
+    width: 290px;
 }
 
 
