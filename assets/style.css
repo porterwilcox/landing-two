@@ -1,6 +1,6 @@
 /* reuseable styles */
 :root {
-    --light-shade: #adadad;
+    --light-shade: #c1c1c1;
     --light-accent: #c96567;
     --main-color: #9e5a63;
     --dark-accent: #644e5b;
@@ -36,6 +36,9 @@
 .text-dark-shade {
     color: var(--dark-shade);
 }
+.text-main {
+    color: var(--main-color);
+}
 .text-vis {
     color: whitesmoke;
     text-shadow: 0 0 5px black;
@@ -44,12 +47,9 @@
 
 /* unique to elements */
 body {
-    overflow-x: hidden;
+    overflow-x: hidden!important;
+    background: var(--light)
 }
-/* .sub-title {
-    border-left: 2px solid var(--main-color);
-    padding-left: 1vw;
-} */
     /* HEADER */
 .bg-create {
     background-image: url('./images/create.jpg');
@@ -110,19 +110,22 @@ a:hover {
     transform-style: preserve-3d;   
 }
     /* ABOUT */
-.slant-about {
+.slant-about-prior {
     position: relative;
     height: 30vh;
 }
-.slant-about::after {
+.slant-about-prior::after {
     content: "";
     position: absolute;
     bottom: 0;
 	border-style: solid;
 	border-color: transparent;
 	border-width: 10vh 50vw;
-	border-bottom-color: var(--light);
-	border-left-color: var(--light);
+	border-bottom-color: var(--light-shade);
+	border-left-color: var(--light-shade);
+}
+.about-row {
+    background: var(--light-shade);
 }
 .about-border-bottom {  
     border-left: 2px solid var(--main-color);
@@ -147,7 +150,90 @@ a:hover {
     height: 300px;
     width: 290px;
 }
-
+.personal h4 {
+    border-left: 1px solid var(--light);
+    padding-left: .5vw;
+    color: var(--light);
+}
+    /* PROJECTS */
+.slant-projects-prior {
+    position: relative;
+    height: 30vh;
+    background: var(--light-shade);
+}
+.slant-projects-prior::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 10vh 50vw;
+    border-left-color: var(--light);
+    border-bottom-color: var(--light);
+}
+.projects-container {
+    box-shadow: 0 2px 5px black;
+    padding: 2vw 1.5vw;
+}
+.card-outter {
+    background: transparent!important;
+    box-shadow: none!important;
+    border: none!important;
+}
+.card {
+    position: relative;
+    background: var(--light);
+    box-shadow: 0 2px 5px black;
+}
+.card:hover .project-img {
+    filter: blur(1px);
+}
+.project-img {
+    width: 90%!important;
+    position: absolute;
+    top: -15px;
+    border-radius: 5%;
+    left: 5%;
+    box-shadow: 0 2px 5px 1px black;
+}
+.project-links {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    top: 20%;
+    left: 23%;
+}
+.card:hover .project-links {
+    display: block;
+}
+.project-body {
+    margin-top: 30vh;
+}
+.project-desc {
+    /* margin-left: 1%; */
+    padding-left: 2%;
+    border-left: 1px solid var(--main-color)
+}
+@media (hover: none) {
+    .card:hover .project-img {
+        filter: blur(0);
+    }
+    .projects-container {
+        padding: 5vw 2vw;
+    }
+    .project-body {
+        margin-top: 20vh;
+    }
+    .project-links {
+        bottom: 0;
+        left: 5%;
+        display: block;
+        font-size: 60%;
+    }
+}
+.no-blur {
+    filter: blur(0)!important;
+}
 
 
 

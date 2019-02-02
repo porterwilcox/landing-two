@@ -3,7 +3,7 @@
 let formicon = transformicons.add(".tcon")
 
 //side-nav-btn color changing script
-let offsetTopPos = document.querySelector('.slant-about').offsetTop
+let offsetTopPos = document.querySelector('.slant-about-prior').offsetTop
 
 window.addEventListener('scroll', checkPosition)
 
@@ -21,7 +21,7 @@ checkPosition()
 //collapse side-nav on click
 let sideNav = document.querySelector('.side-nav')
 
-sideNav.addEventListener('click', (e) => {
+sideNav.addEventListener('click', () => {
     $('.collapse').collapse('hide')
     formicon.revert('.tcon-menu--xbutterfly')
 })
