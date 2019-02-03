@@ -144,6 +144,9 @@ a:hover {
     padding-right: .5vw;
     color: var(--light);
 }
+.p-card {
+    padding: 8vh 0;
+}
 .portrait img {
     border-radius: 50%;
     box-shadow: 0 1px 5px black;
@@ -215,6 +218,9 @@ a:hover {
     border-left: 1px solid var(--main-color)
 }
 @media (hover: none) {
+    .p-card {
+        padding: 0;
+    }
     .card:hover .project-img {
         filter: blur(0);
     }
