@@ -60,11 +60,11 @@ body {
     position: fixed;
     left: .5vw;
     top: 1vh;
-    z-index: 2;
+    z-index: 1000001;
 }
 .side-nav {
     position: fixed;
-    z-index: 1;
+    z-index: 1000000;
     padding-top: 20vh;
 }
 a {
@@ -127,7 +127,7 @@ a:hover {
 .about-row {
     background: var(--light-shade);
 }
-.about-border-bottom {  
+.title-flare {  
     border-left: 2px solid var(--main-color);
     border-bottom: 2px solid var(--main-color);
     padding-left: .5vw;
@@ -234,6 +234,55 @@ a:hover {
 .no-blur {
     filter: blur(0)!important;
 }
+    /* skills */
+.skill-img-caro {
+    height: 300px;
+    width: 300px;
+}
+.skill-img-grid {
+    height: 130px;
+    width: 130px;
+}
+@media (max-width: 400px) {
+    .skill-img-caro {
+        height: 225px;
+        width: 225px;
+    }
+}
+    /* contact */
+.contact-card {
+    background: var(--dark);
+    box-shadow: 0 2px 5px black;
+}
+input, textarea {
+    background: transparent;
+    color: white;
+    border: none;
+    border-bottom: 1px solid var(--dark-accent);
+}
+input::placeholder, textarea::placeholder {
+    color: white;
+}
+input:focus, textarea:focus {
+    border: none;
+    outline: none;
+    border-bottom: 3px solid var(--main-color);
+}
+.bottom {
+    background: var(--main-color);
+    position: relative;
+    height: 20vh;
+    z-index: -100;
+}
+.bottom::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    width: 100vw;
+    border: 10vh solid var(--main-color);
+    z-index: -100;
+}
+
 
 
 
@@ -349,3 +398,42 @@ a:hover {
       overflow: visible;
       position: static;
       width: auto; }
+
+      .tcon-grid {
+        padding: 1rem; }
+        .tcon-grid .tcon-grid__item {
+          width: 0.5rem;
+          height: 0.5rem;
+          background: black;
+          color: black;
+          -webkit-transition: 0.3s;
+          transition: 0.3s; }
+      
+      .tcon-grid.tcon-transform .tcon-grid__item {
+        -webkit-transform: rotate3d(0, 0, 1, -45deg) scale3d(0.8, 0.8, 0.8);
+        transform: rotate3d(0, 0, 1, -45deg) scale3d(0.8, 0.8, 0.8); }
+      
+      .tcon-grid--rearrange .tcon-grid__item {
+        -webkit-box-shadow: -0.625rem -0.625rem, 0 -0.625rem, 0.625rem -0.625rem, -0.625rem 0, 0.625rem 0, -0.625rem 0.625rem, 0 0.625rem, 0.625rem 0.625rem;
+        box-shadow: -0.625rem -0.625rem, 0 -0.625rem, 0.625rem -0.625rem, -0.625rem 0, 0.625rem 0, -0.625rem 0.625rem, 0 0.625rem, 0.625rem 0.625rem; }
+      
+      .tcon-grid--rearrange.tcon-transform .tcon-grid__item {
+        -webkit-box-shadow: 0 -0.5rem, 0 -1rem, 0.5rem 0, -1rem 0, 1rem 0, -0.5rem 0, 0 1rem, 0 0.5rem;
+        box-shadow: 0 -0.5rem, 0 -1rem, 0.5rem 0, -1rem 0, 1rem 0, -0.5rem 0, 0 1rem, 0 0.5rem; }
+      
+      .tcon-visuallyhidden {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px; }
+        .tcon-visuallyhidden:active, .tcon-visuallyhidden:focus {
+          clip: auto;
+          height: auto;
+          margin: 0;
+          overflow: visible;
+          position: static;
+          width: auto; }
