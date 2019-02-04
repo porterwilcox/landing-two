@@ -49,7 +49,7 @@ function caroPause(pause) {
 
 // skills templates
 let carouselTemplate = `
-<div class="carousel carousel-fade" data-ride="carousel" data-interval="500">
+<div class="carousel carousel-fade" data-ride="carousel" data-interval="500" data-pause="false">
     <div class="carousel-inner">
         <div class="carousel-item active">
             <div class="w-100 d-flex justify-content-center align-items-center">
