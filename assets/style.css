@@ -240,6 +240,13 @@ a:hover {
 .no-blur {
     filter: blur(0)!important;
 }
+h2 a {
+    color: white;
+    text-shadow: 0 0 5px black;
+}
+h2 a:hover {
+    color: var(--main-color);
+}
     /* skills */
 .skill-img-caro {
     height: 300px;
