@@ -98,6 +98,11 @@ let carouselTemplate = `
         </div>
         <div class="carousel-item">
             <div class="w-100 d-flex justify-content-center align-items-center">
+                <img class="skill-img-caro" src="assets/images/skills/git.png" alt="git">
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="w-100 d-flex justify-content-center align-items-center">
                 <img class="skill-img-caro" src="assets/images/skills/unity.png" alt="unity">
             </div>
         </div>
@@ -145,6 +150,10 @@ let gridTemplate = `
     <div class="col-6 col-md-3 d-flex flex-column justify-content-center align-items-center p-1">
         <img src="assets/images/skills/my-sql.png" alt="mySql" class="skill-img-grid">
         <h6>mySQL</h6>
+    </div>
+    <div class="col-6 col-md-3 d-flex flex-column justify-content-center align-items-center p-1">
+        <img src="assets/images/skills/git.png" alt="mySql" class="skill-img-grid">
+        <h6>git</h6>
     </div>
     <div class="col-6 col-md-3 d-flex flex-column justify-content-center align-items-center p-1">
         <img src="assets/images/skills/unity.png" alt="unity" class="skill-img-grid">
