@@ -46,9 +46,12 @@
 
 
 /* unique to elements */
+html {
+    scroll-behavior: smooth;
+}
 body {
     overflow-x: hidden!important;
-    background: var(--light)
+    background: var(--light);
 }
     /* HEADER */
 .bg-create {
