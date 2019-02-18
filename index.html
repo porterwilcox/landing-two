@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#314455"/>
     <link rel="shortcut icon" href="assets/images/rock-balance.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style.css">
@@ -24,34 +23,19 @@
                 <span class="tcon-visuallyhidden">toggle menu</span>
             </button>
             <!-- collapse content -->
-            <div class="side-nav col-6 col-md-3 bg-main-color collapse h100 text-right">
+            <div class="side-nav col-5 col-md-2 bg-main-color collapse h100 text-right">
+                <h4 onclick="window.scrollTo({top: 0, behavior: 'smooth'})"><a href="#">top</a></h4>
                 <h4><a href="#about">about</a></h4>
-                <h4><a href="#projects">projects</a></h4>
+                <h4><a href="#portfolio">portfolio</a></h4>
                 <h4><a href="#skills">skills</a></h4>
                 <h4><a href="#contact">contact</a></h4>
             </div>
             <!-- header content -->
-            <div class="offset-md-8 text-vis col-md-4 offset-1 col-11 d-flex flex-column align-items-around justify-content-around">
-                <div>
-                    <h1><span class="title-flare">P</span>orter Wilcox</h1>
-                    <div class="i-am-borde ml-3 pl-2">
-                        <h3>web developer,</h3>
-                        <h3>software engineer,</h3>
-                        <h3>software instructor.</h3>
-                    </div>
-                </div>
-                <!-- <h1 class="captcha text-center w-75">let's build together.</h1> -->
-                <div class="connect-card w-75">
-                    <div class="connect-card-inner fast-font d-flex flex-column text-center justify-content-around align-items-center">
-                        <div class="connect-card-front d-flex flex-column text-center justify-content-around align-items-center">
-                            <h2 class="p-1">let's build together</h2>
-                        </div>
-                        <div class="connect-card-back d-flex flex-column text-center justify-content-around align-items-center">
-                            <a href="#contact">
-                                <h2 class="m-3 text-white">click to contact</h2>
-                            </a>
-                        </div>
-                    </div>
+            <div class="offset-md-6 text-vis col-md-6 col-12 d-flex flex-column align-items-center justify-content-center">
+                <div class="text-center">
+                    <h1><b><span class="title-flare">P</span>orter Wilcox</b></h1>
+                    <h2>Software Developer</h2>
+                    <h2>and Instructor</h2>
                 </div>
             </div>
         </div>
@@ -64,11 +48,11 @@
                 <div class="row">
                     <h2 class="col-12 sub-title mb-4"><span class="title-flare">a</span>bout</h2>
                     <div class="col-12 col-md-7">
-                        <div class="about-card experience text-right p-3">
+                        <div class="about-card m-1 experience text-right p-3">
                             <h4>Experience and Work</h4>
                             <p>I'm a full time staff member and instructor at CodeWorks in Boise, Idaho. As a former student and graduate of CodeWorks - class of summer 2018 - I am aware of how challenging the class is for students, because we teach to industry standards. This means that as an instructor I know both what the industry standards are and, most importantly, why we write our code accordingly. My emphasis on readability, scalability, and protection enables my works to function optimally throughout their duration.</p>
                             <p>At CodeWorks we teach both front end and back end web development. I am well versed in the languages and technologies necessary to produce modern full stack applications.</p>
-                            <p>Beyond work, I enjoy creating a wide range of side projects from fully functional websites to virtual reality video games.</p>
+                            <p>Beyond work, I enjoy creating a wide range of side portfolio from fully functional websites to virtual reality video games.</p>
                         </div>
                     </div>
                     <div class="col-12 p-card col-md-5 d-flex justify-content-center align-items-center">
@@ -77,7 +61,7 @@
                         </div>
                     </div>
                     <div class="col-12 offset-md-3 mb-1 col-md-9">
-                        <div class="about-card personal p-3">
+                        <div class="about-card m-1 personal p-3">
                             <h4>Personal</h4>
                             <p>In 2016 I graduated from Boise State University with a bachelor's degree in philosophy. While earning my degree I most enjoyed the rigorous analytical thinking that solving logical proofs demanded. I couldn't have known then that Plato's theory of Forms would solidify my understanding of constructor functions or ES6 classes, or that the concepts frequenting symbolic logic would reemerge in programming encapsulation. Studying philosophy taught me how to develop and cultivate new frameworks of thought, which I've utilized immensely within the software industry.</p>
                             <p>My passions other than software development are rock climbing, mountain biking/touring, soccer, and camping.</p>
@@ -88,42 +72,42 @@
             </div>
         </div>
     </main>
-    <!-- projects -->
+    <!-- portfolio -->
     <main class="container-fluid">
-        <div id="projects" class="slant-projects-prior row"></div>
+        <div id="portfolio" class="slant-portfolio-prior row"></div>
         <div class="row justify-content-center">
             <div class="col-10">
                 <div class="row">
-                    <h2 class="col-12 mb-4"><span class="title-flare">p</span>rojects</h2>
+                    <h2 class="col-12 mb-4"><span class="title-flare">p</span>ortfolio</h2>
                     <div class="col-12">
-                        <div class="card-columns projects-container bg-dark">
+                        <div class="card-columns portfolio-container bg-dark">
                             <!-- time keepr -->
                             <div class="card">
                                 <h3>TimeKeepr</h3>
-                                <div class="project-desc">
+                                <div class="portfolio-desc">
                                 <p>Time Keepr is an employee time management application to be used by employees and managers. Managers register their business and invite their employees to join. Registered employees are only allowed to clock-in when their geolocation matches the coordinates of the business.</p>
                                 <p>Built with Google Maps API, Vue, C#, and MySql</p>
                                 </div>
                                 <h4 class="text-center">
-                                    <a target="_blank" href="https://github.com/porterwilcox/timekeepr">repo</a> | <a
-                                        target="_blank" href="https://time-keepr.herokuapp.com">demo</a>
+                                    <a target="_blank" rel="noreferrer" href="https://github.com/porterwilcox/timekeepr">repo</a> | <a
+                                        target="_blank" rel="noreferrer" href="https://time-keepr.herokuapp.com">demo</a>
                                 </h4>
                             </div>
                             <!-- chess clock -->
                             <div class="card card-outter">
                                 <div class="card-inner pt-3">
                                     <div class="card">
-                                        <img class="project-img" src="assets/images/projects/chess.jpg" />
-                                        <div class="project-links">
+                                        <img class="portfolio-img" src="assets/images/portfolio/chess.jpg" />
+                                        <div class="portfolio-links">
                                             <h2>
-                                                <a target="_blank" href="https://github.com/porterwilcox/chess-clock">repo</a>
+                                                <a target="_blank" rel="noreferrer" href="https://github.com/porterwilcox/chess-clock">repo</a>
                                                 |
-                                                <a target="_blank" href="https://porterwilcox.github.io/chess-clock/">demo</a>
+                                                <a target="_blank" rel="noreferrer" href="https://porterwilcox.github.io/chess-clock/">demo</a>
                                             </h2>
                                         </div>
-                                        <div class="project-body">
+                                        <div class="portfolio-body">
                                             <h3>Chess Clock</h3>
-                                            <p class="project-desc">This simple chess clock was the first application I ever made. It's been used in some firey chess games. Although it could be improved, the chess clock has worked without updates since it's release.</p>
+                                            <p class="portfolio-desc">This simple chess clock was the first application I ever made. It's been used in some firey chess games. Although it could be improved, the chess clock has worked without updates since it's release.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -131,27 +115,27 @@
                             <!-- simon says -->
                             <div class="card">
                                 <h3>Simon Says</h3>
-                                <p class="project-desc">Simon Says was the second application I ever made! Built with Bootstrap to practice responsive web designs.</p>
+                                <p class="portfolio-desc">Simon Says was the second application I ever made! Built with Bootstrap to practice responsive web designs.</p>
                                 <h4 class="text-center">
-                                    <a target="_blank" href="https://github.com/porterwilcox/matching-game">repo</a> |
-                                    <a target="_blank" href="https://porterwilcox.github.io/matching-game/">demo</a>
+                                    <a target="_blank" rel="noreferrer" href="https://github.com/porterwilcox/matching-game">repo</a> |
+                                    <a target="_blank" rel="noreferrer" href="https://porterwilcox.github.io/matching-game/">demo</a>
                                 </h4>
                             </div>
                             <!-- keepr -->
                             <div class="card card-outter">
                                 <div class="card-inner pt-3">
                                     <div class="card">
-                                        <img class="project-img" src="assets/images/projects/keepr.png" />
-                                        <div class="project-links">
+                                        <img class="portfolio-img" src="assets/images/portfolio/keepr.png" />
+                                        <div class="portfolio-links">
                                             <h2>
-                                                <a target="_blank" href="https://github.com/porterwilcox/keepr">repo</a>
+                                                <a target="_blank" rel="noreferrer" href="https://github.com/porterwilcox/keepr">repo</a>
                                                 |
-                                                <a target="_blank" href="https://keepr208.herokuapp.com">demo</a>
+                                                <a target="_blank" rel="noreferrer" href="https://keepr208.herokuapp.com">demo</a>
                                             </h2>
                                         </div>
-                                        <div class="project-body">
+                                        <div class="portfolio-body">
                                             <h3>Pinterest Clone</h3>
-                                            <div class="project-desc">
+                                            <div class="portfolio-desc">
                                                 <p>Keepr is a complete Pinterest clone. Users may save posts to their own collections/vaults. Site visitors may browse the most recent public posts without account, but authentication is required for complete site access.</p>
                                                 <p>Built with Vue, C#, and MySql</p>
                                             </div>
@@ -163,17 +147,17 @@
                             <div class="card card-outter">
                                 <div class="card-inner pt-3">
                                     <div class="card">
-                                        <img class="project-img" src="assets/images/projects/music-is-fun.png" />
-                                        <div class="project-links">
+                                        <img class="portfolio-img" src="assets/images/portfolio/music-is-fun.png" />
+                                        <div class="portfolio-links">
                                             <h2>
-                                                <a target="_blank" href="https://github.com/porterwilcox/Music-Is-Fun">repo</a>
+                                                <a target="_blank" rel="noreferrer" href="https://github.com/porterwilcox/Music-Is-Fun">repo</a>
                                                 |
-                                                <a target="_blank" href="https://porterwilcox.github.io/Music-Is-Fun/">demo</a>
+                                                <a target="_blank" rel="noreferrer" href="https://porterwilcox.github.io/Music-Is-Fun/">demo</a>
                                             </h2>
                                         </div>
-                                        <div class="project-body">
+                                        <div class="portfolio-body">
                                             <h3>iTunes API browser</h3>
-                                            <p class="project-desc">This simple application utilizes the iTunes api and displays the top search results providing both descriptions and audio of the song retrevied.</p>
+                                            <p class="portfolio-desc">This simple application utilizes the iTunes api and displays the top search results providing both descriptions and audio of the song retrevied.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -181,29 +165,29 @@
                             <!-- castle grimtol -->
                             <div class="card">
                                 <h3>Halloween Adventure</h3>
-                                <div class="project-desc">
+                                <div class="portfolio-desc">
                                     <p>Halloween Adventure is an exciting text based video game. Players must move throughout the map in proper order, picking up the correct items along the way in order to make it to the full size candy bar neighborhood.</p>
                                     <p>Demo upon request. Built with C#</p>
                                 </div>
                                 <h4 class="text-center">
-                                    <a target="_blank" href="https://github.com/porterwilcox/castle-grimtol">repo</a>
+                                    <a target="_blank" rel="noreferrer" href="https://github.com/porterwilcox/castle-grimtol">repo</a>
                                 </h4>
                             </div>
                             <!-- emmit parallax fireside -->
                             <div class="card card-outter">
                                 <div class="card-inner pt-3">
                                     <div class="card">
-                                        <img class="project-img" src="assets/images/projects/emmit-parallax.png" />
-                                        <div class="project-links">
+                                        <img class="portfolio-img" src="assets/images/portfolio/emmit-parallax.png" />
+                                        <div class="portfolio-links">
                                             <h2>
-                                                <a target="_blank" href="https://github.com/porterwilcox/fireside-emmet-parallax">repo</a>
+                                                <a target="_blank" rel="noreferrer" href="https://github.com/porterwilcox/fireside-emmet-parallax">repo</a>
                                                 |
-                                                <a target="_blank" href="https://porterwilcox.github.io/fireside-emmet-parallax/">demo</a>
+                                                <a target="_blank" rel="noreferrer" href="https://porterwilcox.github.io/fireside-emmet-parallax/">demo</a>
                                             </h2>
                                         </div>
-                                        <div class="project-body">
+                                        <div class="portfolio-body">
                                             <h3>Lesson on Emmet abbreviations</h3>
-                                            <p class="project-desc">This is just one of my many fireside lessons. This lessons are optional after hour lessons for the students of CodeWorks. In this lesson we utilie Emmet abbreviations that's built into VSCode to produce the body of our index.html in just one line.</p>
+                                            <p class="portfolio-desc">This is just one of my many fireside lessons. This lessons are optional after hour lessons for the students of CodeWorks. In this lesson we utilie Emmet abbreviations that's built into VSCode to produce the body of our index.html in just one line.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -212,10 +196,10 @@
                             <div class="card card-outter">
                                 <div class="card-inner pt-3">
                                     <div class="card">
-                                        <img class="project-img no-blur" src="assets/images/github-logo-jpg.jpg" />
-                                        <div class="project-body">
+                                        <img class="portfolio-img no-blur" src="assets/images/github-logo-jpg.jpg" />
+                                        <div class="portfolio-body">
                                             <h3>See what else I'm working on</h3>
-                                            <p class="project-desc">Explore <a class="text-main" target="_blank" href="https://github.com/porterwilcox">my
+                                            <p class="portfolio-desc">Explore <a class="text-main" target="_blank" rel="noreferrer" href="https://github.com/porterwilcox">my
                                                     github</a> to see what I've been up to. Follow me to stay caught
                                                 up.</p>
                                         </div>

@@ -5,19 +5,36 @@ let tcons = Array.from(document.querySelectorAll(".tcon"))
 let formicon = transformicons.add(tcons[0])
 let gridicon = transformicons.add(tcons[1])
 
-//side-nav-btn color changing script
+//side-nav
 let offsetTopPos = document.querySelector('.slant-about-prior').offsetTop
 
+//side-nav default open on desktop
+let hasClosed
+let isMobile = window.matchMedia("(hover: none)")
+if(!isMobile.matches && !window.scrollY) {
+    $('.collapse').collapse('show')
+    formicon.transform('.tcon-menu--xbutterfly')
+}
+    //default close
+function defaultCloseNav(pos) {
+    if (pos > offsetTopPos*.5) {
+        $('.collapse').collapse('hide')
+        formicon.revert('.tcon-menu--xbutterfly')
+        hasClosed = true
+    }
+}
+
+//nav-btn color changing script
 window.addEventListener('scroll', checkPosition)
 
 function checkPosition() {
     let curPos = window.scrollY
-    if (curPos < offsetTopPos - 40) {
-        document.querySelector('.side-nav-btn').style.background = 'transparent'
+    if (curPos < offsetTopPos+20) {
+        document.querySelector('.side-nav-btn').classList.remove('nav-btn-bg')
     } else {
-        document.querySelector('.side-nav-btn').style.background = 'var(--main-color)'
-        document.querySelector('.side-nav-btn').style.borderRadius = '15%'
+        document.querySelector('.side-nav-btn').classList.add('nav-btn-bg')
     }
+    if(!hasClosed) defaultCloseNav(curPos)
 }
 checkPosition()
 
