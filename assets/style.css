@@ -73,6 +73,9 @@ body {
         background-attachment: scroll;
         filter: blur(10px);
     }
+    .nav-to-top {
+        display: none;
+    }
 }
 .nav-btn-bg {
     position: relative;
@@ -284,6 +287,7 @@ input:focus, textarea:focus {
     position: relative;
     height: 20vh;
     z-index: -100;
+    box-shadow: 0 1px 10px 10px var(--main-color);
 }
 .bottom::before {
     content: "";
