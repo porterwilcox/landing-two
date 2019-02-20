@@ -90,6 +90,7 @@ body {
     border-width: 100px;
     border-left-color: var(--main-color);
     border-top-color: var(--main-color);
+    pointer-events: none;
 }
 .side-nav-btn {
     position: fixed;
@@ -102,6 +103,7 @@ body {
     z-index: 1000000;
     padding-top: 20vh;
     box-shadow: 0 0 100px 10px black;
+    height: 100vh;
 }
 a {
     color: var(--light-shade);
@@ -109,6 +111,9 @@ a {
 a:hover {
     text-decoration: none;
     color: var(--dark-shade);
+}
+.scroll-spy-active {
+    color: white;
 }
     /* ABOUT */
 .slant-about-prior {

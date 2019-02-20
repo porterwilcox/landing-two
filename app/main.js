@@ -7,34 +7,48 @@ let gridicon = transformicons.add(tcons[1])
 
 //side-nav
 let offsetTopPos = document.querySelector('.slant-about-prior').offsetTop
+let about = document.querySelector("a[href='#about']")
+let portfolio = document.querySelector("a[href='#portfolio']")
+let skills = document.querySelector("a[href='#skills']")
+let contact = document.querySelector("a[href='#contact']")
+$('.collapse').on('hide.bs.collapse', function() {this.style.visibility = "hidden"})
+$('.collapse').on('show.bs.collapse', function() {this.style.visibility = "visible"})
 
 //side-nav default open on desktop
 let hasClosed
-let isMobile = window.matchMedia("(hover: none)")
-if(!isMobile.matches && !window.scrollY) {
+let isMobile = window.matchMedia("(hover: none)").matches
+if(!isMobile && !window.scrollY) {
     $('.collapse').collapse('show')
     formicon.transform('.tcon-menu--xbutterfly')
 }
     //default close
 function defaultCloseNav(pos) {
-    if (pos > offsetTopPos*.5) {
+    let dif = offsetTopPos - pos
+    let percent =  dif/offsetTopPos * 100
+    document.querySelector('.side-nav').style.height = percent +"vh"
+    if (pos > offsetTopPos*.6) {
         $('.collapse').collapse('hide')
         formicon.revert('.tcon-menu--xbutterfly')
         hasClosed = true
-    }
+        // document.querySelector('.side-nav').style.height = "100vh"
+}
 }
 
 //nav-btn color changing script
 window.addEventListener('scroll', checkPosition)
 
+let topLink = document.querySelector('.nav-to-top')
 function checkPosition() {
     let curPos = window.scrollY
     if (curPos < offsetTopPos+20) {
         document.querySelector('.side-nav-btn').classList.remove('nav-btn-bg')
+        topLink.style.display = 'none'
     } else {
         document.querySelector('.side-nav-btn').classList.add('nav-btn-bg')
+        if(!isMobile) topLink.style.display = 'block'
     }
     if(!hasClosed) defaultCloseNav(curPos)
+    scrollSpy(curPos)
 }
 checkPosition()
 
@@ -45,6 +59,18 @@ sideNav.addEventListener('click', () => {
     $('.collapse').collapse('hide')
     formicon.revert('.tcon-menu--xbutterfly')
 })
+
+//side-nav scroll spy
+function scrollSpy(pos) {
+    about.classList.remove('scroll-spy-active')
+    portfolio.classList.remove('scroll-spy-active')
+    skills.classList.remove('scroll-spy-active')
+    contact.classList.remove('scroll-spy-active')
+    if (pos >= document.querySelector('#contact').offsetTop-50) contact.classList.add('scroll-spy-active')
+    else if (pos >= document.querySelector('#skills').offsetTop-50) skills.classList.add('scroll-spy-active')
+    else if (pos >= document.querySelector('#portfolio').offsetTop-50) portfolio.classList.add('scroll-spy-active')
+    else if (pos >= document.querySelector('#about').offsetTop-50) about.classList.add('scroll-spy-active')
+}
 
 // pause and play skills carousel
 function caroPause(pause) {
